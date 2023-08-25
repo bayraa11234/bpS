@@ -16,9 +16,12 @@
 
 import express from 'express';
 import fetch from 'node-fetch';
+import cors from 'cors';
 
 const app = express();
-const port = 3000; // You can choose any available port
+const port = 8000; // You can choose any available port
+
+app.use(cors())
 
 // Define a route that proxies requests to the API
 app.get('/', async (req, res) => {
